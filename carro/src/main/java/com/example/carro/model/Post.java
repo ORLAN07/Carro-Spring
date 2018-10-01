@@ -19,7 +19,7 @@ public class Post extends AuditModel{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private Long Id;
     
     @NotNull
     @Size(max = 100)
@@ -35,11 +35,11 @@ public class Post extends AuditModel{
     @Lob 
     private String content;
 
-    public int getId() {
+    public Long getId() {
         return Id;
     }
 
-    public void setId(int Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
