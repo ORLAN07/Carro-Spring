@@ -22,5 +22,9 @@ public class PostController {
     @Autowired
     PostRepository postRepository;
     
+    @GetMapping("/posts")
+    public Page<Post> getAllPost(Pageable pageable){
+        return postRepository.findAll(pageable);
+    }
     
 }
